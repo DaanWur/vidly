@@ -9,7 +9,7 @@ const router = express.Router()
 
 
 router.get('/', async (req, res, next) => {
-
+    throw new Error('Could not find genre');
     const genres = await Genre.find().sort('name');
     res.send(genres);
 
